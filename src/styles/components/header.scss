@@ -1,0 +1,145 @@
+.header {
+    background-color: #273142;
+    display: flex;
+    align-items: center;
+
+    .header-body {
+        width: 100%;
+
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+            padding: 0 23px;
+            background-color: #1f2734;
+            border-bottom: 1px solid #525a68;
+            box-sizing: unset;
+
+            .toolbar-left {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .list-item {
+                    display: flex;
+                    gap: 5px;
+                    padding-right: 16px;
+                    position: relative;
+
+                    .link-container {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        .link {
+                            cursor: pointer;
+
+                            .list-text {
+                                color: #95a1b5;
+                                font-size: 12px !important;
+                                line-height: 14px;
+                                font-weight: 400;
+                                width: max-content;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-bar {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            height: 60px;
+            gap: 16px;
+            padding: 0 23px;
+
+            .left {
+                .logo-link {
+                    .logo-wrap {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: 100px;
+                            height: 40px;
+                            aspect-ratio: auto 100/ 40;
+                            vertical-align: middle;
+
+                        }
+                    }
+                }
+            }
+
+            .right {
+                width: 100%;
+
+                .nav-wrap {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 50px;
+                    position: relative;
+
+                    .nav-left {
+                        display: flex;
+                        margin: 0;
+                        margin-inline: 0;
+                        padding-inline-start: 30px;
+                        position: relative;
+
+                        li {
+                            span {
+                                color: #95a1b5;
+                                font-size: 15px;
+                                font-weight: 500;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+
+                    .nav-right {
+                        display: flex;
+                        align-items: center;
+
+                        .info-center {
+                            display: flex;
+                            align-items: center;
+                            color: #95a1b5;
+                            width: 100%;
+
+                            .text {
+                                color: #95a1b5;
+                                font-size: 12px;
+                                font-weight: 500;
+                                white-space: nowrap;
+                                margin-left: 10px;
+                                text-transform: capitalize;
+                            }
+                        }
+
+                        .academy {
+                            margin-left: 15px;
+                            display: flex;
+                            align-items: center;
+                            color: #95a1b5;
+                            width: 100%;
+                            .text {
+                                color: #95a1b5;
+                                font-size: 12px;
+                                font-weight: 500;
+                                white-space: nowrap;
+                                margin-left: 10px;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
