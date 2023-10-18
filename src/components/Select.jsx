@@ -1,23 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Option from './Option';
 
-const Select = ({className,id}) => {
-    const options = [
-        { value: 'ayaqqabi', text: 'ayaqqabi' },
-        { value: 'saat', text: 'saat' },
-        { value: 'tekstil', text: 'tekstil' }
-    ]
-
-    
+const Select = ({ className, id, options }) => {
+   
     return (
-        <select className={`select ${className}`} id={id} >
-            {
-                options.map((item,index) => {
-                    return (<option key={index} value={item.value}>{item.text}</option>)
-                })
+        <select className={`selected ${className}`} id={id} >
+            {options.map((item) => {
+                return (<Option  value={item.value} text={item.text} />)
+            })
             }
-
         </select>
     )
 }
+
 
 export default Select

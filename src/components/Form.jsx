@@ -26,6 +26,12 @@ const Form = () => {
             options: [{ value: "Adana", text: "Adana" },
             { value: "Ankara", text: "Ankara" },
             { value: "Aksaray", text: "Aksaray" }]
+        },
+        {
+            id: "district",
+            options: [{ value: "Cukurova", text: "Cukurova" },
+            { value: "Ceylan", text: "Ceylan" },
+            { value: "Aladag", text: "Aladag" }]
         }
     ]
     return (
@@ -55,7 +61,13 @@ const Form = () => {
                     <div className="input-wrap">
                         <Label htmlFor="category" text="SATILACAK ÜRÜN KATEGORİSİ" className="label" />
                         <div className="content">
-                            <Select className="product-category" id="category" />
+                        {data.map((item) => {
+                                switch(item.id) {
+                                    case "category":
+                            return <Select key={item.id} className="product-category" id={item.id} options={item.options}/>
+                                }
+                            })}
+                            {/* <Select className="product-category" id="category" /> */}
                         </div>
                     </div>
                 </div>
@@ -63,7 +75,13 @@ const Form = () => {
                     <div className="input-wrap">
                         <Label htmlFor="company" text="ŞİRKET TÜRÜ" className="label" />
                         <div className="content">
-                            <Select className="product-category" id="company" />
+                        {data.map((item) => {
+                                switch(item.id) {
+                                    case "company":
+                            return <Select key={item.id} className="product-category" id={item.id} options={item.options}/>
+                                }
+                            })}
+                            {/* <Select className="product-category" id="company" /> */}
                         </div>
                     </div>
                     <div className="input-wrap">
@@ -77,13 +95,24 @@ const Form = () => {
                     <div className="input-wrap">
                         <Label htmlFor="city" text="IL" className="label" />
                         <div className="content">
-                            <Select className="product-category" id="city" />
+                        {data.map((item) => {
+                                switch(item.id) {
+                                    case "county":
+                            return <Select key={item.id} className="product-category" id={item.id} options={item.options}/>
+                                }
+                            })}
                         </div>
                     </div>
                     <div className="input-wrap">
                         <Label htmlFor="district" text="ILCE" className="label" />
                         <div className="content">
-                            <Select className="product-category" id="district" />
+                        {data.map((item) => {
+                                switch(item.id) {
+                                    case "district":
+                            return <Select key={item.id} className="product-category" id={item.id} options={item.options}/>
+                                }
+                            })}
+                            {/* <Select className="product-category" id="district" /> */}
                         </div>
                     </div>
                 </div>
@@ -91,7 +120,7 @@ const Form = () => {
                     <div className="input-wrap">
                         <Label htmlFor="referancecode" text="REFERANS KODU (ZORUNLU DEGIL)" className="label" />
                         <div className="content">
-                            <Select className="ref-code" id="referancecode" />
+                            <Input type="text" className="ref-code" id="referancecode" placeholder="Varsa Referans Kodunuzu Giriniz"/>
                         </div>
                     </div>
                 </div>
