@@ -1,5 +1,17 @@
 .btn {
-    background-color: #fff;
     padding: 4px 6px;
     border-radius: 5px;
+    border: none;
 }
+
+.continue {
+    background-color: #f27a1a;
+    width: 100%;
+    color: #fff;
+    height: 40px;
+    &:hover {
+        background-color: #ef6114;
+        color: #f1f2f7;
+    }
+}
+

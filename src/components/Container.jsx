@@ -1,7 +1,7 @@
 import React from 'react'
 import Cardbox from './Cardbox'
 import Button from './Button'
-
+import Form from './Form'
 const Container = () => {
 
     const data = [{
@@ -41,8 +41,7 @@ const Container = () => {
                     <Cardbox title={item.title} ads={item.ads} />
                 ))
             } */}
-
-            <Button/>
+            <Form/>
         </div>
     )
 }

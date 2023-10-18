@@ -1,0 +1,11 @@
+.common {
+    padding: 11px 40px 11px 15px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    &[type="checkbox"]{
+        width: 16px;
+        height: 16px;
+    }
+}

@@ -9,4 +9,5 @@ const Card = ({name, price}) => {
   )
 }
 
+
 export default Card
